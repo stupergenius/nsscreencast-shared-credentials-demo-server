@@ -39,3 +39,14 @@ get '/private' do
 
   erb :private
 end
+
+get '/apple-app-site-association' do
+  content_type 'application/json'
+  {
+    "webcredentials" => {
+      "apps" => [
+        "AUP79D422L.com.davita.demo.WebviewCredentialsDemo"
+      ]
+    }
+  }.to_json
+end
